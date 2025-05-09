@@ -106,6 +106,28 @@ a {
   margin-bottom: 16px;
 }
 
+.browse-image-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 160px); /* Two columns, each 160px wide */
+  grid-template-rows: repeat(3, 160px); /* Three rows, each 160px high */
+  gap: 22px; /* Gap between images */
+  justify-content: center; /* Center the grid horizontally */
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 18px;
+}
+
+.browse-image-grid-container img {
+  width: 100%; /* Make images fill their grid cells */
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the entire cell */
+}
+
+/* Hide extra thumbnails on mobile */
+.browse-image-grid-container img:nth-child(n+7) {
+  display: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -186,22 +208,6 @@ img {
   font-weight: 300;
 }
 
-.lens-container {
-  margin-bottom: 18px;
-}
-
-.lens-text {
-  text-align: center;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.lens-text-light {
-  color: #d8d8d8;
-  font-weight: 300;
-}
-
 .exif-container {
   margin-bottom: 28px;
   display: flex;
@@ -243,6 +249,46 @@ img {
   color: #cccccc;
 }
 
+.justify-content-flex-end {
+  justify-content: flex-end;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Spacing between items */
+  margin-top: 20px; /* Add some space above the pagination */
+  margin-bottom: 28px;
+}
+
+.pagination-link,
+.pagination-arrow {
+  font-size: 16px;
+  font-weight: 400;
+  color: #8AB4F8;
+  text-decoration: none; /* Remove underlines from links */
+  display: flex; /* Use flexbox to center content */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+}
+
+.pagination-link.active {
+  color: #ffffff; /* Active link color */
+}
+
+.pagination-link:hover {
+  color: #cccccc; /* Active link color */
+}
+
+.pagination-arrow svg {
+  transition: fill 150ms ease-in-out; /* Add a transition for a smooth effect */
+}
+
+.pagination-arrow:hover svg {
+  fill: #cccccc; /* Change the fill color on hover */
+}
+
 /* Media Queries Start */
 
 /* Tablet 768px and up  */
@@ -254,7 +300,7 @@ img {
   .phone {
     display: none;
   }
-  
+
   .desktop {
     display: none;
   }
@@ -305,8 +351,21 @@ img {
     margin: 0 16px 40px 16px;
   }
 
-  .camera-container, .lens-container, .exif-container {
+  .camera-container,
+  .lens-container,
+  .exif-container {
     margin-bottom: 0;
+  }
+
+  .browse-image-grid-container {
+    grid-template-columns: repeat(4, 164px); /* Four columns, each 164px wide */
+    grid-template-rows: repeat(4, 164px); /* Four rows, each 164px high */
+    gap: 16px; /* Gap between images */
+  }
+
+  /* Show all thumbnails on tablet */
+  .browse-image-grid-container img:nth-child(n+7) {
+    display: block;
   }
 }
 
@@ -319,13 +378,19 @@ img {
   .desktop {
     display: inline-block;
   }
-  
+
   .tablet {
     display: none;
   }
-  
+
   .phone {
     display: none;
+  }
+
+  .browse-image-grid-container {
+    grid-template-columns: repeat(4, 256px); /* Four columns, each 256px wide */
+    grid-template-rows: repeat(4, 256px); /* Four rows, each 256px high */
+    gap: 24px; /* Gap between images */
   }
 }
 
