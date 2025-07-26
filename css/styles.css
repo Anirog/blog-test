@@ -438,6 +438,9 @@ img {
 .nav-toggle:checked ~ .nav-links a:nth-child(4) {
   animation-delay: 400ms;
 }
+.nav-toggle:checked ~ .nav-links a:nth-child(5) {
+  animation-delay: 500ms;
+}
 
 /* Menu Animation End */
 
