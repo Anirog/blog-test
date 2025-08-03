@@ -50,6 +50,10 @@
   /* Bullet points */
 }
 
+.post-content ol li {
+  margin-bottom: 1px;
+}
+
 .post-content ul li {
   margin-bottom: 1px;
 }
@@ -228,8 +232,6 @@ figure img {
 
 /* Blog Post Styles End */
 
-
-
 /* Blog Index Styles Start */
 
 .blog-card {
@@ -244,8 +246,6 @@ figure img {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
-
-
 
 /* Remove bottom margin from the last card */
 .blog-card:last-child {
