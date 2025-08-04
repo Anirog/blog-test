@@ -24,6 +24,7 @@
   color: #e8eaed;
   /* match your site's light text */
   padding-bottom: 0.3rem;
+  /* Add this line */
 }
 
 .post-content ol {
@@ -32,10 +33,8 @@
   line-height: 1.6;
   color: #ffffff;
   margin-bottom: 18px;
-  padding-left: 28px;
-  /* Indent the list */
   list-style-type: decimal;
-  /* Default number style */
+  list-style-position: inside;
 }
 
 .post-content ul {
@@ -44,10 +43,8 @@
   line-height: 1.6;
   color: #ffffff;
   margin-bottom: 18px;
-  padding-left: 28px;
-  /* Same indent as <ol> */
   list-style-type: disc;
-  /* Bullet points */
+  list-style-position: inside;
 }
 
 .post-content ol li {
@@ -942,13 +939,6 @@ img {
     display: block;
   }
 
-  .post-content ol {
-    padding-left: 21px;
-  }
-
-  .post-content ul {
-  padding-left: 21px;
-}
 }
 
 /* Desktop 1440px and up */
