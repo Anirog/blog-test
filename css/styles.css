@@ -340,7 +340,7 @@ figure img {
   background-color: #18191a;
   color: #fff;
   box-sizing: border-box;
-  background-image: url("/images/magnifying-glass.svg");
+  background-image: url("../images/magnifying-glass.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: 12px center;
