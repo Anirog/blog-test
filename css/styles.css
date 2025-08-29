@@ -18,7 +18,7 @@
 }
 
 .post-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: #e8eaed;
@@ -346,8 +346,36 @@ figure img {
   background-position: 12px center;
 }
 
+.blog-index .search-box {
+  margin-bottom: 40px; /* for index and tag pages */
+}
+
+.blog-post .search-box {
+  margin-bottom: 0; /* tight spacing when no search results */
+}
+
+.blog-post #searchResults.has-results {
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
 .search-box::placeholder {
   color: #888;
+}
+
+#searchResults {
+  margin-bottom: 0;
+}
+
+#searchResults.has-results {
+  margin-bottom: 48px;
+}
+
+.highlight {
+  background-color: #f0f88a;
+  color: #202124;
+  border-radius: 3px;
+  padding: 0 2px;
 }
 
 /* Search Styles End */
@@ -363,7 +391,6 @@ figure img {
   margin: 40px 16px 24px 16px;
   text-align: center;
 }
-
 
 /* Blog Tags Styles End */
 
@@ -500,14 +527,6 @@ a {
 .profile-image {
   height: 30px;
   width: 30px;
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-bottom: 16px;
 }
 
 img {
