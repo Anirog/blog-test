@@ -850,6 +850,14 @@ img {
   margin-bottom: 10px;
 }
 
+.about-image {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
+
 /* About Page Styling End */
 
 /* About Page Media Queries Start */
